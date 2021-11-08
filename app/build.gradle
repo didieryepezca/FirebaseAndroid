@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions' //añadir para acceder a los elementos por el id de la interfaz desde los archivos kotlin.
+}
+
+//añadimos de lo que nos arroja la consola de Firebase
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+apply plugin: 'com.google.firebase.crashlytics' //Añadimos para el monitoreo de errores.
+//-----------------------
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.example.firebasetutorial"
+        minSdk 23
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation platform('com.google.firebase:firebase-bom:28.4.1') //Añadimos de lo que nos arroja Firebase
+    implementation 'com.google.firebase:firebase-analytics-ktx' //Añadimos de lo que nos arroja Firebase
+    implementation 'com.google.firebase:firebase-auth-ktx'//Añadimos libreria de autenticacion
+    implementation 'com.google.android.gms:play-services-auth:19.2.0' //Añadimos libreria de autenticacion con GMAIL
+
+    implementation 'com.google.firebase:firebase-messaging:20.2.0' //Añadimos notificaciones push
+    implementation 'com.google.firebase:firebase-crashlytics-ktx' //Añadimos para el monitoreo de errores.
+
+    implementation 'com.google.firebase:firebase-firestore-ktx' //Añadimos BD Firestore a proyecto.
+
+}

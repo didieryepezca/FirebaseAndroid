@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "971518502159",
+    "project_id": "putorial2021",
+    "storage_bucket": "putorial2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971518502159:android:1c36d36bfa7a9f7cdd4a7a",
+        "android_client_info": {
+          "package_name": "com.example.firebasetutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971518502159-6mrecrii16v4g369d2oo6pa74gmcfohu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOCOPr7qEAiV1M8ST9W4bOyolWaCFSLmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971518502159-6mrecrii16v4g369d2oo6pa74gmcfohu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
